@@ -8,7 +8,7 @@
 
 @section('content')
     <body>
-        <h1>Hello</h1>
+        <h1>{{{ isset($title) ? $title : 'Hello' }}}</h1>
         <div>コンテンツ</div>
 @stop
 
