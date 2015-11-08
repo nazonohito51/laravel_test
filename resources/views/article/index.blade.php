@@ -7,8 +7,8 @@
 @include('layouts.header')
 
 @section('content')
+<div class="container">
     <h1>{{{ isset($title) ? $title : 'Hello' }}}</h1>
-    <div>コンテンツ</div>
     <div class="table-responsive">
         <table class="table table-striped table-hover">
             @foreach($articles as $article)
@@ -19,6 +19,7 @@
             @endforeach
         </table>
     </div>
+</div>
 @stop
 
 @include('layouts.body')
