@@ -16,7 +16,12 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        return view('article.index', ['title' => '記事一覧']);
+        $articles = \App\Article::all();
+
+        return view('article.index', [
+            'title' => '記事一覧',
+            'articles' => $articles,
+        ]);
     }
 
     /**
