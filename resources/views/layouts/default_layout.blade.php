@@ -1,3 +1,3 @@
 @yield('header')
-@yield('content')
+@yield('body')
 @yield('footer')
