@@ -7,20 +7,21 @@
 @include('layouts.header')
 
 @section('content')
-<div class="container">
-    <h1>{{{ isset($title) ? $title : 'Hello' }}}</h1>
-    <div class="table-responsive">
-        <table class="table table-striped table-hover">
-            @foreach($articles as $article)
+    <div class="container">
+        <h1>記事詳細</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
                 <tr>
+                    <td>記事タイトル</td>
                     <td>{{ $article->title }}</td>
-                    <td>{{ $article->text }}</td>
-                    <td>{!! link_to(action('ArticleController@show', ['id' => $article->id]), '詳細', ['class' => 'btn btn-primary']) !!}</td>
                 </tr>
-            @endforeach
-        </table>
+                <tr>
+                    <td>記事本文</td>
+                    <td>{{ $article->text }}</td>
+                </tr>
+            </table>
+        </div>
     </div>
-</div>
 @stop
 
 @include('layouts.body')
