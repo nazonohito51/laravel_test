@@ -9,10 +9,16 @@
 @section('content')
     <h1>{{{ isset($title) ? $title : 'Hello' }}}</h1>
     <div>コンテンツ</div>
-    @foreach($articles as $article)
-        <p>{{ $article->title }}</p>
-        <p>{{ $article->text }}</p>
-    @endforeach
+    <div class="table-responsive">
+        <table class="table table-striped table-hover">
+            @foreach($articles as $article)
+                <tr>
+                    <td>{{ $article->title }}</td>
+                    <td>{{ $article->text }}</td>
+                </tr>
+            @endforeach
+        </table>
+    </div>
 @stop
 
 @include('layouts.body')
