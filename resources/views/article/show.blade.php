@@ -22,6 +22,10 @@
             </table>
         </div>
     </div>
+
+    <div>
+        {!! link_to(action('ArticleController@index'), '戻る', ['class' => 'btn btn-primary']) !!}
+    </div>
 @stop
 
 @include('layouts.body')
